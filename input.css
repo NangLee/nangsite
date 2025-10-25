@@ -1,0 +1,6 @@
+@font-face { font-family: torus; font-weight: thin; src: url('./assets//font/TorusPro-Thin.ttf'); } 
+html, body,h1, h2, h3, h4, h5, h6 {font-family: 'torus', sans-serif;}
+body {background: linear-gradient(to bottom, #e0f2fe 0%, #fbcfe8 35%, #ffa4d3 70%); min-height: 100vh;}
+header, section, footer {background: transparent !important;}
+
+@import "tailwindcss";
