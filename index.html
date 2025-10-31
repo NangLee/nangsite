@@ -5,28 +5,45 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Nang site</title>
 <link href="output.css" rel="stylesheet">
-
 <style>
     html { scroll-behavior: smooth; }
     .full-viewport { min-height: 100vh; }
 </style>
 </head>
-<!--i made this on a 4:3 monithor so idk how it looks on rich people monitors-->
-<!--itll be so nice if i could add animation, im gonna steal maples later-->
 <body class="antialiased via-pink-500 text-shadow-slate-400 text-slate-800">
     <header class="full-viewport flex items-center justify-center">
         <div class="text-center px-6">
             <img
-                src="assets/pfp.jpg"
-                alt="User profile picture"
+                src="assets/pfp.webp"
+                alt="pfp"
                 class="mx-auto w-96 h-96 md:w-96 md:h-96 rounded-full object-cover shadow-2xl transform transition hover:scale-105""
             >
 
             <h1 class="mt-6 text-2xl md:text-4xl font-semibold">Nang</h1>
-            <p class="mt-2 text-base md:text-base text-slate-600 max-w-xl mx-auto">
-                if you think about it, the human population is just a mod of retards being carried by a few geniuses + some functional members.
-            </p>
-
+            <p id="quote" class="mt-2 text-base md:text-base text-slate-600 max-w-xl mx-auto"
+            ></p>
+        <script>
+        const quotes = [
+            '"if you think about it, the human population is just a mob of retards being carried by a few geniuses + some functional members." - phailure the phrog',
+            '"Life is like a pp, it goes up and down" - hana133p',
+            '"walking around b***k? thats illegal!!" - luigi_cars',
+            '"can i walk inside your house?" - nang',
+            '"true friends dont debt eachother" - gavin christiansn',
+            'listen to tuyu',
+            '"my hubris harmed others and pride let down others" - some cool quote from steins gate',
+            'sing us a song youre the piano man',
+            '"you should probably say that once youve actually done it yourself" - some guy on the internet'
+        ];
+        function setRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const qEl = document.getElementById('quote');
+            qEl.textContent = quotes[randomIndex];
+            qEl.classList.remove('animate-slide-in-up');
+            void qEl.offsetWidth;
+            qEl.classList.add('animate-slide-in-up');
+        }
+        window.addEventListener('load', setRandomQuote);
+        </script>
 
             <a href="#sections" class="inline-flex items-center justify-center mt-8 -mb-6">
                 <div class="animate-pulse bg-white p-3 rounded-full shadow-lg">
@@ -38,71 +55,146 @@
             </a>
         </div>
     </header>
-<!-- aboutme -->
+<!-- im all of me -dug -->
     <main id="sections" class="snap-y snap-mandatory overflow-y-auto">
         <section class="snap-start full-viewport">
+    <div>        
         <div class="max-w-6xl mx-auto px-6 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start relative">
             <div class="col-span-1 md:col-span-2">
                 <h2 class="text-center text-2xl md:text-3xl font-semibold mb-4">Nang himself</h2>
                 <p class="text-center text-slate-700 mb-6"><span>this is my pride and glory (nothing)</span></p>
             </div>
-            <div class="space-y-4 md:w-1/2">
-  
-            <div class="relative rounded-2xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="bg-pink-400 text-white rounded-t-2xl py-2 text-center">
-                <h3 class="text-lg font-semibold tracking-wide">Things he can do</h3>
+            
+            <div>
+            <div class="space-y-4 md:max-w-96">
+                <div 
+                class="relative rounded-2xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1" 
+                data-animate="slide-in-left" 
+                data-duration="1s" 
+                data-delay="0.7s"
+                >
+                <div class="bg-pink-400 text-pink-200  rounded-t-2xl py-2 text-center">
+                    <h3 class="text-lg font-semibold tracking-wide">Things he can do</h3>
                 </div>
                 <div class="p-3 text-slate-700 text-left">
-                <ul class="text-slate-600">
-                    <p>Frontend, Python, C#, english</p>
-                </ul>
+                    <ul class="text-pink-500">
+                    <li>- Web Development</li>
+                    <li>- Python</li>
+                    <li>- C#</li>
+                    <li>- English</li>
+                    </ul>
                 </div>
-            </div>
+                </div>
 
-            <div class="relative rounded-2xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1 h-20">
-                <div class="bg-pink-400 text-white rounded-t-2xl py-2 text-center">
-                <h3 class="text-lg font-semibold tracking-wide">Things he has done</h3>
-                </div>
-                <div class="p-3 text-slate-700 text-left">
-                <ul class=" text-slate-600">
-                    <p>2 years of highschool</p>
-                </ul>
-                </div>
-            </div>
-
-            <div class="relative rounded-2xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
-                <div class="bg-pink-400 text-white rounded-t-2xl py-2 text-center">
-                <h3 class="text-lg font-semibold tracking-wide">Interests</h3>
-                </div>
-                <div class="p-4 text-slate-700 text-left">
-                <ul class=" text-slate-600">
-                    <p>Osu, cats, philosiphy</p>
-                </ul>
-                </div>
-            </div>
-            <!--right side gonna finish later preferably in 3 years-->
-            </div>
-                <div class="grid grid-cols-2 sm:grid-cols-2 gap-2">
-                    <div class="p-6 bg-sky-50 rounded-lg shadow">
-                        <h3 class="font-medium">Discord</h3>
-                        <p class="text-sm text-slate-600">@n.ang</p>
+                <div class="relative rounded-2xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1" 
+                data-animate="slide-in-left" 
+                data-duration="1s" 
+                data-delay="0.7s"
+                >
+                    <div class="bg-pink-400 text-pink-200 rounded-t-2xl py-2 text-center">
+                        <h3 class="text-lg font-semibold tracking-wide">Things he has done</h3>
                     </div>
-                    <div class="p-6 bg-sky-50 rounded-lg shadow">
-                        <h3 class="font-medium">telegram</h3>
-                        <p class="text-sm text-slate-600">@nangnu</p>
-                    </div>
-                    <div class="p-6 bg-sky-50 rounded-lg shadow">
-                        <h3 class="font-medium">Osu</h3>
-                        <p class="text-sm text-slate-600">ranie</p>
+                    <div class="p-3 text-slate-700 text-left">
+                    <ul class=" text-pink-500">
+                        <li>- 2 years of highschool</li>
+                        <li>- This site</li>
+                    </ul>
                     </div>
                 </div>
 
+                <div class="relative rounded-2xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1"
+                data-animate="slide-in-left" 
+                data-duration="1s" 
+                data-delay="0.7"
+                >
+                    <div class="bg-pink-400 text-pink-200  rounded-t-2xl py-2 text-center">
+                    <h3 class="text-lg font-semibold tracking-wide">Interests</h3>
+                    </div>
+                    <div class="p-4 text-slate-700 text-left">
+                    <ul class=" text-pink-500 ">
+                        <li>- Osu!</li>
+                        <li>- Math</li>
+                        <li>- Philosophy</li>
+                    </ul>
+                    </div>
+                </div>
             </div>
-            <!-- random stuff im gonna add here later-->
-            <div></div>
+            <!--right side left side ba bad ada bum -->
+                    <div class="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-10">
+                    <p class="text-lg text-slate-700 mb-2"
+                    data-animate="slide-in-up" 
+                    data-duration="1s" 
+                    data-delay="1.2s"
+                    >Corner Canyon High School</p>
+                    <p class="text-lg text-slate-700"
+                    data-animate="slide-in-up" 
+                    data-duration="1s" 
+                    data-delay="1.7s"
+                    >
+                        <span id="ageDisplay" class="font-semibold text-pink-500"></span>
+                    </p>
+                    </div>
+
             </div>
+                <div class="flex flex-col justify-end items-end md:pr-5">
+                    <div class="w-[340px] space-y-4"></div>
+                    <div class="p-1"
+                    data-animate="slide-in-right" 
+                    data-duration="1s" 
+                    data-delay="0s"
+                    >
+                    <iframe
+                        title="Discord user embed"
+                        width="340"
+                        height="120"
+                        frameborder="0"
+                        sandbox="allow-scripts"
+                        src="https://widgets.vendicated.dev/user?id=780260646968361051&theme=light&banner=true&full-banner=false&rounded-corners=true&discord-icon=true&badges=false&guess-nitro=false&"
+                    ></iframe>
+                    </div>
+                    <!--pov you make your own at this point-->
+                    <div class="p-1"
+                    data-animate="slide-in-right" 
+                    data-duration="1s" 
+                    data-delay="0.2s"
+                    >
+                    <div class="w-[340px] rounded-xl overflow-hidden shadow bg-white text-slate-900">
+                        <div class="h-12 w-full relative">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
+                            alt="Banner"
+                            class="absolute inset-0 w-full h-full object-cover bg-sky-500"
+                        />
+                        </div>
+                        <div class="flex items-center relative bg-white text-slate-900 p-3">
+                        <img
+                            src="tgme_page_photo_image" src="https://cdn1.telesco.pe/file/Y3I90_t10Bycf1YeHqAzBtPcIPmpPM4NyLahD6PUohXdmQIqNjSLBfqIwu__HJ-7vs5lO39PzeTsgRlcXAV3At5yIEeHnN-nvH6OeL5VVsNvsyiL5-gAnNdPEL14yIfIydJUqn5j7JVpaLuhhpgRXZImcFpKR-AhETvBpozmpZEsUAS7kTbSzbG-UvW4tQuUUzwzp0ujZ6eu3qedeh2EqiZNHG6tPy5qd401yQ8veC60jQcutZhlytr9HPpX0wqztpm0wPqbourpAgfPmKhU8vk0IT1vzgCpBeiDSrwyYColwQIXDr6c90wmMepCdt7D2Zhp95EvmFP_JdO-xpKWDA.jpg"
+                            alt="Telegram avatar"
+                            class="w-12 h-12 rounded-full mr-3 p-1 bg-sky-100"
+                        />
+                        <div class="flex flex-col">
+                            <p class="font-semibold text-lg leading-tight">nangdesu</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="p-1"
+                    data-animate="slide-in-right" 
+                    data-duration="1s" 
+                    data-delay="0.4s"
+                    >
+                    <iframe
+                        title="osu"
+                        width="340"
+                        height="120"
+                        frameborder="0"
+                        sandbox="allow-scripts allow-same-origin"
+                        src="https://osu-sig.vercel.app/card?user=ranie&mode=std&lang=en&round_avatar=true&animation=true&mini=true&w=340&h=102"   
+                    ></iframe>
+                </div>
+            </div>
+
         </div>
         </section>
 
@@ -114,8 +206,42 @@
             </div>
         </section>
         <footer class="snap-end full-viewport flex items-center justify-center bg-slate-100">
-            <div class="text-slate-600">gullible</div>
+            <div class="text-slate-600"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+    target="_blank">gullible</a></div>
         </footer>
     </main>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const animation = el.dataset.animate || "slide-in-left";
+        const duration = el.dataset.duration || "0.8s";
+        const delay = el.dataset.delay || "0s";
+        el.style.animationName = animation;
+        el.style.animationDuration = duration;
+        el.style.animationTimingFunction = "ease-out";
+        el.style.animationDelay = delay;
+        el.style.animationFillMode = "forwards";
+        el.style.visibility = "visible";
+        observer.unobserve(el);}});
+  }, { threshold: 0.2 });
+document.querySelectorAll("[data-animate]").forEach(el => {
+    el.style.opacity = "0";
+    el.style.visibility = "hidden";
+    observer.observe(el);});
+  function calculateAge(birthDate) {
+    const now = new Date();
+    const diff = now - birthDate;
+    return diff / (1000 * 60 * 60 * 24 * 365.25);}
+  function updateAge() {
+    const birth = new Date("2009-07-15T00:00:00");
+    const age = calculateAge(birth);
+    const ageDisplay = document.getElementById("ageDisplay");
+    if (ageDisplay) ageDisplay.textContent = age.toFixed(9);}
+  updateAge();
+  setInterval(updateAge, 100);});
+</script>
 </body>
 </html>

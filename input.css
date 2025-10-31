@@ -4,3 +4,14 @@ body {background: linear-gradient(to bottom, #e0f2fe 0%, #fbcfe8 35%, #ffa4d3 70
 header, section, footer {background: transparent !important;}
 
 @import "tailwindcss";
+@theme {
+  @keyframes slide-in-left {from { transform: translateX(-100%); opacity: 0; }to { transform: translateX(0); opacity: 1; }}
+  @keyframes slide-in-right {from { transform: translateX(100%); opacity: 0; }to { transform: translateX(0); opacity: 1; }}
+  @keyframes slide-in-up {from { transform: translateY(100%); opacity: 0; }to { transform: translateY(0); opacity: 1; }}
+--animate-slide-in-left: slide-in-left 1s ease-out forwards;
+--animate-slide-in-right: slide-in-right 1s ease-out forwards;
+ --animate-slide-in-up: slide-in-up 1s ease-out forwards;
+}
+.animate-slide-in-left {}
+.animate-slide-in-right {}
+.animate-slide-in-up {}

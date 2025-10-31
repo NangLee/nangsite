@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["index.html"],
+  safelist: [
+    "animate-slide-in-left",
+    "animate-slide-in-right",
+    "animate-slide-in-up",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -9,5 +14,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
-//this doesnt work for ssome reason but its here ig
+}
