@@ -579,6 +579,20 @@
       .iframe-wrapper {
         overflow: hidden !important;
       }
+
+      @media (max-width: 768px) {
+        .iframe-wrapper {
+          height: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .iframe-wrapper iframe {
+          width: 95%;
+          height: auto;
+        }
+      }
     </style>
   </head>
   <body>
