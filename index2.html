@@ -591,40 +591,7 @@
         .iframe-wrapper iframe {
           width: 95%;
           height: auto;
-        }
-      }
-
-      .osu-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        width: 100%;
-        max-width: 340px;
-        /* same as your original osu card width */
-        margin: 0 auto;
-        /* center horizontally */
-      }
-
-      .osu-wrapper iframe {
-        width: 100%;
-        /* fill the wrapper */
-        height: auto;
-        /* maintain aspect ratio */
-        max-height: 102px;
-        /* match your osu card height */
-        display: block;
-      }
-
-      @media (max-width: 768px) {
-        .osu-wrapper {
-          max-width: 95%;
-          /* allow shrinking on small screens */
-        }
-
-        .osu-wrapper iframe {
-          max-height: none;
-          /* let it scale automatically */
+          /* maintain aspect ratio */
         }
       }
     </style>
@@ -702,8 +669,8 @@
                 </div>
               </div>
             </div>
-            <div class="osu-wrapper">
-              <iframe title="osu" src="https://osu-sig.vercel.app/card?user=ranie&mode=std&lang=en&round_avatar=true&animation=true&mini=true&w=340&h=102" frameborder="0" sandbox="allow-scripts allow-same-origin"></iframe>
+            <div class="social-card animate-fade-in-up animate-delay-2">
+              <iframe title="osu" width="100%" height="120" frameborder="0" sandbox="allow-scripts allow-same-origin" src="https://osu-sig.vercel.app/card?user=ranie&mode=std&lang=en&round_avatar=true&animation=true&mini=true&w=340&h=102"></iframe>
             </div>
           </div>
         </div>
