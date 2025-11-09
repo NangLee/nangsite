@@ -507,9 +507,20 @@
 
       .iframe-wrapper {
         width: 100%;
+        height: 120px;
         border-radius: var(--radius);
         overflow: hidden;
         margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--bg-white);
+      }
+
+      .iframe-wrapper iframe {
+        display: block;
+        max-width: 100%;
+        height: auto;
       }
 
       #discord-embed {
